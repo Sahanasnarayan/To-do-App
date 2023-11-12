@@ -1,9 +1,10 @@
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css'
-import Register from './components/Register'
+import Routing from './Routes'
+
 function App() {
   return (
-   <div><Register/></div>
+    <div className="App">
+      <Routing />
+    </div>
   );
 }
 
