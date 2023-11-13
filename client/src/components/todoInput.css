@@ -1,0 +1,25 @@
+.todoInputPage {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.todoInput {
+    width: 300px;
+    height: 30px;
+    border: 1px solid rgb(93, 92, 92);
+    border-radius: 5px;
+}
+
+.addButton {
+    margin: 0px 15px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.addButton:hover {
+    background-color: #1478e3;
+}

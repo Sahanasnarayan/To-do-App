@@ -1,8 +1,8 @@
 // usercontroller.ts
 import { Request, Response } from 'express';
 const User = require("../Models/UserModels");
-const session = require('session');
-
+// const session = require('session');
+console.log("we are in usercontroller");
 // User Registration
 export const registerUser = async (req: Request, res: Response) => {
     try {

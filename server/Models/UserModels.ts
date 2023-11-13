@@ -1,5 +1,5 @@
 import mongoose, { Schema, Document } from 'mongoose';
-const validator = require('validator');
+// const validator = require('validator');
 
 interface UserInterface extends Document {
   name: string;
@@ -17,7 +17,7 @@ const userSchema: Schema<UserInterface> = new mongoose.Schema(
       type: String,
       required: [true, 'Please enter your email'],
       unique: true,
-      validate: [validator.isEmail, 'Please enter a valid email'],
+      // validate: [validator.isEmail, 'Please enter a valid email'],
     },
     password: {
       type: String,

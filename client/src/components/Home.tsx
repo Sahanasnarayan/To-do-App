@@ -20,10 +20,11 @@ const Home = () => {
                     <button className='logout-button' onClick={() => {navigate('/login')}}>Logout &rarr;</button>
     
                 </div>
-    
+            
+                {/* <todoInput userId = {_id}/> */}
                 {/* <ListItemInput userId = {_id}/>
-    
                 <ListingListItems userId = {_id}/> */}
+                {/* <todoList userId = {_id}/> */}
                 
             </div>
         )

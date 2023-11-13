@@ -15,7 +15,7 @@ const Signup = () => {
     return (
         <div className="loginPage">
 
-            <h2>Sign Up Page</h2>
+            <h2>Sign Up</h2>
 
             <form >
 
@@ -26,7 +26,7 @@ const Signup = () => {
 
                 <div className="form-block">
                     <label>Username:</label>
-                    <input type="text" name="username"  value={formData.username} placeholder="Enter user name" required/>
+                    <input type="text" name="username"  value={formData.username} placeholder="Enter username" required/>
                 </div>
 
                 <div className="form-block">
@@ -37,7 +37,7 @@ const Signup = () => {
                 <button type="submit" className='signupButton'>Signup</button>
 
                 <p>
-                    Already have an account? <a onClick={() => {navigate('/login')}}>Click Here</a>
+                    Already have an account? <a onClick={() => {navigate('/login')}}>Login</a>
                 </p>
 
             </form>

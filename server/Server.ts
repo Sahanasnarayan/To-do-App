@@ -1,19 +1,20 @@
+// import express, { Application, Request, Response } from 'express';
 import express, { Application, Request, Response } from 'express';
-import { connectToDB } from './dbConnection'; 
+const database = require("./dbConnection")
 const app: Application = express();
 const PORT: number = 3000; 
+
 app.use(express.json()); 
-app.get('/', (req: Request, res: Response) => {   
-  res.send('Hello, World!'); }); 
+app.use(express.urlencoded({extended: false}));
+
+// const userRoutes = require('./Routes/UserRoutes');
+// app.use('/api/user', userRoutes);
 
 
+// const taskRoutes = require('./Routes/TaskRoutes');
+// app.use('/api/Task', taskRoutes);
 
-connectToDB()   
-.then(() => {     
-  app.listen(PORT, () => {       
-    console.log(`Server is running on http://localhost:${PORT}`);    
- });   
-})   
-.catch((err) => {     
-  console.error('Failed to connect to MongoDB:', err);   
-});
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+})
+  

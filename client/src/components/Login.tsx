@@ -10,9 +10,11 @@ function Login() {
         username: "",
         password: ""
     })
+
+    // here i will have to add validations
     return (
         <div className="loginPage">
-            <h2>Login Page</h2>
+            <h2>Login</h2>
             <form >
                 <div className="form-block">
                     <label htmlFor="username">Username:</label>
@@ -42,7 +44,7 @@ function Login() {
 
                 <p>
                     Don't have an account?{' '}
-                    <a onClick={() => navigate('/register')}>Click Here</a>
+                    <a onClick={() => navigate('/register')}>SignUp</a>
                 </p>
             </form>
         </div>
