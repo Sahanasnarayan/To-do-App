@@ -1,15 +1,12 @@
-import {useState} from 'react';
-import {useNavigate} from 'react-router-dom';
-import axios from 'axios';
+import {useNavigate, useParams} from 'react-router-dom';
+// import axios from 'axios';
 import './Home.css'
-// import ListItemInput from './ListItemInput'
-// import ListingListItems from './ListingListItems';
-
-
+import TodoInput from './TodoInput';
+import TodoList from './TodoList';
 const Home = () => {
     
         const navigate = useNavigate();
-    
+        const {_id} = useParams();
         return (
             <div className='mainPage'>
                 
@@ -21,10 +18,8 @@ const Home = () => {
     
                 </div>
             
-                {/* <todoInput userId = {_id}/> */}
-                {/* <ListItemInput userId = {_id}/>
-                <ListingListItems userId = {_id}/> */}
-                {/* <todoList userId = {_id}/> */}
+                <TodoInput userId   = {_id}/>
+                <TodoList userId = {_id}/>
                 
             </div>
         )

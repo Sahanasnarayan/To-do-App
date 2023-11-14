@@ -1,25 +1,27 @@
 .todoInputPage {
     display: flex;
-    flex-direction: row;
-    position: fixed;
-    top: 20%;
-    left: 50%;
+    flex-direction:row-reverse;
+    position:fixed;
+    top: 10%;
     transform: translate(-50%, -50%);
+    margin: 100px 100px;
 }
 
 .todoInput {
-    width: 300px;
+    width: 500px;
     height: 30px;
-    border: 1px solid rgb(93, 92, 92);
+    border: 2px solid rgb(197, 15, 106);
     border-radius: 5px;
+    margin: 100px 500px;
 }
 
 .addButton {
-    margin: 0px 15px;
-    border: 1px solid black;
+    height:25px;
+    margin: 150px -573px;
+    border: 2px solid rgb(170, 150, 230);
     border-radius: 5px;
 }
 
 .addButton:hover {
-    background-color: #1478e3;
+    background-color: rgb(170, 150, 230);
 }
