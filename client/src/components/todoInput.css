@@ -1,7 +1,7 @@
 .todoInputPage {
     display: flex;
-    flex-direction:row-reverse;
-    position:fixed;
+    flex-direction: row-reverse;
+    position: fixed;
     top: 10%;
     transform: translate(-50%, -50%);
     margin: 100px 100px;
@@ -16,7 +16,7 @@
 }
 
 .addButton {
-    height:25px;
+    height: 25px;
     margin: 150px -573px;
     border: 2px solid rgb(170, 150, 230);
     border-radius: 5px;

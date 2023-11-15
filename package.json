@@ -10,7 +10,7 @@
     "dev": "nodemon server.ts"
   },
   "keywords": [],
-  "author": "",
+  "author": "Sahana",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",

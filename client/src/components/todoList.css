@@ -1,32 +1,15 @@
-/* .list-item-page {
-    position: fixed;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    align-items: center;
-    background-color: aqua;
-    width: 50vh;
-    border: 1px solid rgb(126, 125, 125);
-    border-radius: 5px;
-    padding: 5px;
-    transition: box-shadow 0.5s ease;
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+.header {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: x-large;
+    font-weight: 500;
+    color: rgb(73, 69, 69);
+    margin: 20px 120px;
 }
 
-.list-item-page:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-} */
-.header {
-     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-     font-size:x-large;
-     font-weight: 500;
-     color:rgb(73, 69, 69);
-     margin: 20px 120px;
-}
 .list-item-page {
     display: flex;
-    justify-content:stretch;
-    align-items:center;
+    justify-content: stretch;
+    align-items: center;
 }
 
 .list {
@@ -40,7 +23,7 @@
 .list-item {
     display: flex;
     flex-direction: row;
-    justify-content:space-between;
+    justify-content: space-between;
     list-style-type: none;
     width: 404px;
     min-height: 28px;
@@ -59,17 +42,6 @@
 .item-description {
     width: 220px;
 }
-
-/* .update-button, .delete-button, .complete {
-    border: 1px solid black;
-    border-radius: 3px;
-    margin-left: 5px;
-    padding: 5px 3px 3px 3px;
-}
-
-.update-button:hover, .delete-button:hover {
-    background-color: #1478e3;
-} */
 
 .buttons {
     border: 1px solid rgb(105, 78, 184);

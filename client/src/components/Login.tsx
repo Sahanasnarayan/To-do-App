@@ -9,13 +9,13 @@ interface FormData {
 }
 
 function Login() {
-    
+
     const navigate = useNavigate();
 
     const [formData, setFormData] = useState<FormData>({
         username: "",
         password: ""
-    }) 
+    })
     // giving a real time data
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setFormData({
@@ -43,10 +43,7 @@ function Login() {
                 alert("Something went wrong, Please try again");
             }
         } catch (error) {
-            // alert("Invalid Username or Password ", error);
             alert(`Invalid Username or Password. error: ${error.message}`);
-            // i guess here there is a error
-
         }
     }
     // here i will have to add validations
@@ -59,10 +56,10 @@ function Login() {
                     <input
                         type="text"
                         name="username"
-                        onChange={handleChange} 
+                        onChange={handleChange}
                         value={formData.username}
                         placeholder="Enter username"
-                        
+
                     />
                 </div>
 
@@ -71,10 +68,10 @@ function Login() {
                     <input
                         type="password"
                         name="password"
-                        onChange={handleChange} 
+                        onChange={handleChange}
                         value={formData.password}
                         placeholder="Enter your password"
-                        
+
                     />
                 </div>
 

@@ -9,7 +9,7 @@ interface TodoItem {
 }
 
 interface TodoListProps {
-  userId?:string; // Adjust the type based on your actual user ID type
+  userId?: string;
 }
 
 export default function TodoList({ userId }: TodoListProps) {
@@ -17,7 +17,6 @@ export default function TodoList({ userId }: TodoListProps) {
   const [completed, setCompleted] = useState<TodoItem[]>([]);
   const [inComplete, setInComplete] = useState<TodoItem[]>([]);
   const [editItemId, setEditItemId] = useState<string | null>(null);
-  // check with this
   const [editedTask, setEditedTask] = useState<string>('');
   const [editComplete, setEditComplete] = useState<boolean>(false);
 
@@ -26,7 +25,6 @@ export default function TodoList({ userId }: TodoListProps) {
       try {
         const response = await axios.get(`http://127.0.0.1:3001/api/task/getTodoItem/${userId}`);
         const todoItems: TodoItem[] = response.data.listItems;
-        // there was a error here 
 
         setItems(todoItems);
 
@@ -37,14 +35,14 @@ export default function TodoList({ userId }: TodoListProps) {
         setInComplete(incomplete);
       } catch (error) {
         alert(`Error fetching data:error: ${error.message}`);
-  
+
       }
     };
-  
-   if (userId){
-    fetchTodoItems();
-   }
-  }, [userId,items]);
+
+    if (userId) {
+      fetchTodoItems();
+    }
+  }, [userId, items]);
 
   const handleDelete = async (ItemId: string) => {
     try {

@@ -8,7 +8,7 @@ const ListSchema = mongoose.Schema({
     isCompleted: {
         type: Boolean,
         default: false
-    }, 
+    },
     userId: {
         type: mongoose.Schema.Types.ObjectId,
         required: true
@@ -17,5 +17,4 @@ const ListSchema = mongoose.Schema({
 
 const List = mongoose.model('List', ListSchema);
 
-// module.exports = List;
 export default List;

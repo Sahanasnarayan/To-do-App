@@ -1,11 +1,10 @@
 import mongoose from 'mongoose';
 const databaseUrl = 'mongodb://127.0.0.1:27017/todo';
-//   mongoose connect the database and study
 mongoose.connect(databaseUrl, {
-}).then(()=>{
+}).then(() => {
     console.log("Successfully connected with MongoDB");
-}).catch((error)=>{
+}).catch((error) => {
     console.log(error);
 });
- 
+
 

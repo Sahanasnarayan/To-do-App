@@ -12,7 +12,7 @@
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "useUnknownInCatchVariables": false,
-    // i added the above
+    // added useunknowincatchvariables to ignore undefined error
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
     "module": "esnext",

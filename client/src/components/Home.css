@@ -1,5 +1,5 @@
 .navbar {
-    font-family: 'Arial', sans-serif; 
+    font-family: 'Arial', sans-serif;
     position: fixed;
     color: blueviolet;
     top: 0;
@@ -9,7 +9,6 @@
     display: flex;
     justify-content: space-between;
 }
-
 
 .navbar-header {
     padding-left: 30px;
@@ -29,4 +28,3 @@
     background-color: #e3147b;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
 }
-  

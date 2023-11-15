@@ -3,7 +3,7 @@ import { ObjectId } from 'mongodb';
 import List from '../Models/TaskModels';
 import User from '../Models/UserModels';
 
-// Add task to list
+// Add task to Todo Items
 export const addTodoItem = async (req: Request, res: Response) => {
     try {
         const { task, userId } = req.body;
@@ -33,7 +33,7 @@ export const addTodoItem = async (req: Request, res: Response) => {
     }
 };
 
-// Update task from the list
+// Update task from the Todo Items
 export const updateTodoItem = async (req: Request, res: Response) => {
     try {
         const listItem = req.params.id;
@@ -64,7 +64,7 @@ export const updateTodoItem = async (req: Request, res: Response) => {
     }
 };
 
-// Delete the List Item
+// Delete the selected Todo Items
 export const deleteTodoItem = async (req: Request, res: Response) => {
     try {
         const itemId = req.params.id;
@@ -85,7 +85,7 @@ export const deleteTodoItem = async (req: Request, res: Response) => {
     }
 };
 
-// Read All List Items
+// To Read All Todo Items
 export const getTodoItem = async (req: Request, res: Response) => {
     try {
         const userId = req.params.id;

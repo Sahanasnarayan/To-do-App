@@ -1,190 +1,38 @@
-/* .loginPage {
-    background-color: #fff;
-    padding: 20px;
-    border: 1px solid black;
-    border-radius: 5px;
-    text-align: center;
-    width: 300px;
-    height: 400px;
-}
-
-h2 {
-    margin-top: 5px;
-}
-
-.form-block {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-align: left;
-}
-
-.form-block > label {
-    padding-left: 3px;
-}
-
-.form-block > input {
-    width: 100%;
-    padding: 5px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.block1 {
-    margin-top: 50px;
-}
-
-.loginButton, .signupButton {
-    background-color: #1478e3;
-    color: white;
-    border: none;
-    border-radius: 3px;
-    padding: 10px 20px;
-    width: 50%;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-h6 {
-    opacity: 0.5;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-p {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 550px;
-}
-
-a {
-    color: #1478e3;
-}
-
-a:hover {
-    cursor: pointer;
-    color: #0056b3;
-} */
-
-/* Rest of your styles remain unchanged */
-/* body, html {
-    height: 100%; /* Set the height of body and html to 100% */
-    /* margin: 0;
-}
-
-.App {
-    background: url('https://images.pexels.com/photos/2736499/pexels-photo-2736499.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
-    background-size: cover;
-    height: 100%;
-}
-.loginPage {
-    background-color: #fff; 
-    padding: 20px; */
-    /* border: 1px solid rgb(241, 232, 232);  */
-    /* border-radius: 5px; 
-    text-align: center;
-    width: 300px;
-    height: auto;
-    margin: auto;
-}
-
-h2 {
-    margin-top: 5px;
-}
-
-.form-block {
-    margin-top: 20px;
-    text-align: left;
-}
-
-.form-block > label {
-    display: block;
-    padding-left: 3px;
-}
-
-.form-block > input {
-    width: calc(100% - 10px);
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-    box-shadow: 0 0 5px rgba(20, 120, 227, 0.5); /* Adjusted box-shadow for better visibility */
-/* } */
-
-/* 
-.loginButton, .signupButton {
-    background-color: #1478e3;
-    color: white;
-    border: none;
-    border-radius: 3px;
-    padding: 10px 20px;
-    width: 100%;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-.loginButton:hover, .signupButton:hover {
-    background-color: #0056b3;
-}
-
-p {
-    margin-top: 10px;
-} */
-
-/* a {
-    color: #1478e3;
-    text-decoration: none;
-}
-
-a:hover {
-    cursor: pointer;
-    color: #32c2fb;
-}  */
-/* body, html {
-    overflow: hidden;
-  } */
-  
-  body {
+body {
     background-image: url('https://marketplace.canva.com/EAFOvC9QZKI/1/0/1600w/canva-purple-and-blue-gradient-minimalist-desktop-wallpaper-ow5plp_V32I.jpg');
     background-size: cover;
     background-position: center center;
-  }
-  .loginPage {
+}
+
+.loginPage {
     position: absolute;
     top: 4%;
     left: 0;
     right: 0;
     bottom: 0;
-    /* background-color: #fff; */
     padding: 20px;
     border-radius: 5px;
     text-align: center;
     width: 300px;
     height: fit-content;
     margin: auto;
-  }
-  
-  h2 {
+}
+
+h2 {
     margin-top: 5px;
-  }
-  
-  .form-block {
+}
+
+.form-block {
     margin-top: 20px;
     text-align: left;
-  }
-  
-  .form-block > label {
+}
+
+.form-block>label {
     display: block;
     padding-left: 3px;
-  }
-  
-  .form-block > input {
+}
+
+.form-block>input {
     width: calc(100% - 10px);
     padding: 8px;
     margin-top: 5px;
@@ -192,9 +40,10 @@ a:hover {
     border-radius: 5px;
     box-sizing: border-box;
     box-shadow: 0 0 5px rgba(227, 20, 203, 0.5);
-  }
-  
-  .loginButton, .signupButton {
+}
+
+.loginButton,
+.signupButton {
     background-color: rgb(255, 16, 128);
     color: white;
     border: none;
@@ -203,23 +52,23 @@ a:hover {
     width: 30%;
     cursor: pointer;
     margin-top: 30px;
-  }
-  
-  .loginButton:hover, .signupButton:hover {
+}
+
+.loginButton:hover,
+.signupButton:hover {
     background-color: rgb(215, 161, 189);
-  }
-  
-  p {
+}
+
+p {
     margin-top: 10px;
-  }
-  
-  a {
+}
+
+a {
     color: #7114e3;
     text-decoration: none;
-  }
-  
-  a:hover {
+}
+
+a:hover {
     cursor: pointer;
     color: #32c2fb;
-  }
-  
+}

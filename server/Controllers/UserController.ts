@@ -1,11 +1,9 @@
-// usercontroller.ts
 import { Request, Response } from 'express';
 import User from '../Models/UserModels';
 import bcrypt from 'bcrypt';
-// const session = require('session');
 console.log("we are in usercontroller");
-// User Registration
 
+// TO SIGNUP
 export const registerUser = async (req: Request, res: Response) => {
     try {
         const { name, username, password } = req.body;
@@ -27,7 +25,7 @@ export const registerUser = async (req: Request, res: Response) => {
         return res.status(200).json({ user });
     } catch (error) {
         console.error('Error:', error);
-        return res.status(500).json({ message: 'Something went wrong', error});
+        return res.status(500).json({ message: 'Something went wrong', error });
     }
 };
 
