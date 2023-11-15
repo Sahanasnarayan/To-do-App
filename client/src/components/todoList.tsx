@@ -9,7 +9,7 @@ interface TodoItem {
 }
 
 interface TodoListProps {
-  userId: string | undefined; // Adjust the type based on your actual user ID type
+  userId?:string; // Adjust the type based on your actual user ID type
 }
 
 export default function TodoList({ userId }: TodoListProps) {
@@ -17,16 +17,18 @@ export default function TodoList({ userId }: TodoListProps) {
   const [completed, setCompleted] = useState<TodoItem[]>([]);
   const [inComplete, setInComplete] = useState<TodoItem[]>([]);
   const [editItemId, setEditItemId] = useState<string | null>(null);
+  // check with this
   const [editedTask, setEditedTask] = useState<string>('');
   const [editComplete, setEditComplete] = useState<boolean>(false);
 
   useEffect(() => {
     const fetchTodoItems = async () => {
       try {
-        const response = await axios.get(`http://127.0.0.1:3001/api/list/getTodoItem/${userId}`);
-        const TodoItems: TodoItem[] = response.data.TodoItems;
+        const response = await axios.get(`http://127.0.0.1:3001/api/task/getTodoItem/${userId}`);
+        const todoItems: TodoItem[] = response.data.listItems;
+        // there was a error here 
 
-        setItems(TodoItems);
+        setItems(todoItems);
 
         const complete = items.filter((item) => item.isCompleted);
         const incomplete = items.filter((item) => !item.isCompleted);
@@ -35,15 +37,18 @@ export default function TodoList({ userId }: TodoListProps) {
         setInComplete(incomplete);
       } catch (error) {
         alert(`Error fetching data:error: ${error.message}`);
+  
       }
     };
-
+  
+   if (userId){
     fetchTodoItems();
+   }
   }, [userId,items]);
 
   const handleDelete = async (ItemId: string) => {
     try {
-      await axios.delete(`http://127.0.0.1:3001/api/list/deleteTodoItem/${ItemId}`);
+      await axios.delete(`http://127.0.0.1:3001/api/task/deleteTodoItem/${ItemId}`);
     } catch (error) {
       alert(`Something went wrong and error occurred is. error: ${error.message}`);
     }
@@ -57,7 +62,7 @@ export default function TodoList({ userId }: TodoListProps) {
 
   const handleUpdateSave = async (itemId: string) => {
     try {
-      await axios.put(`http://127.0.0.1:3001/api/list/updateTodoItem/${itemId}`, {
+      await axios.put(`http://127.0.0.1:3001/api/task/updateTodoItem/${itemId}`, {
         task: editedTask,
         isCompleted: editComplete,
       });
@@ -69,9 +74,9 @@ export default function TodoList({ userId }: TodoListProps) {
 
   const handleIncomplete = async (itemId: string, task: string, iscompleted: boolean) => {
     try {
-      await axios.put(`http://127.0.0.1:3001/api/list/updateTodoItem/${itemId}`, {
+      await axios.put(`http://127.0.0.1:3001/api/task/updateTodoItem/${itemId}`, {
         task: task,
-        isCompleted: !iscompleted,
+        isCompleted: !iscompleted
       });
     } catch (error) {
       alert(`The error occurred is. error: ${error.message}`);
@@ -81,7 +86,7 @@ export default function TodoList({ userId }: TodoListProps) {
   return (
     <div className="list-item-page">
       <ul className="list">
-        <h1>Incomplete Items</h1>
+        <h1 className="header">Incomplete Items</h1>
         {inComplete.map((item) => (
           <li className="list-item" key={item._id}>
             {editItemId === item._id ? (
@@ -116,7 +121,7 @@ export default function TodoList({ userId }: TodoListProps) {
         ))}
       </ul>
       <ul className="list">
-        <h1>Completed Items</h1>
+        <h1 className="header">Completed Items</h1>
         {completed.map((item) => (
           <li className="list-item" key={item._id}>
             <span className="item-description">{item.task}</span>

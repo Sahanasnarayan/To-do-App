@@ -25,7 +25,7 @@ export default function TodoInput({ userId }: TodoInputProps) {
             alert('Please enter any task first');
             return;
           }
-          await axios.post('http://127.0.0.1:3001/api/list/addTodoItem', data);
+          await axios.post('http://127.0.0.1:3001/api/task/addTodoItem', data);
           setTask('');
         } catch (error) {
           alert('Something went wrong in adding task. Please check the console for more details.error: ${error.message}');

@@ -16,7 +16,12 @@
 .list-item-page:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 } */
-
+.header {
+     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     font-size:x-large;
+     font-weight: 500;
+     color:rgb(73, 69, 69);
+}
 .list-item-page {
     display: flex;
     justify-content: center;
