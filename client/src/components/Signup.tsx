@@ -5,7 +5,7 @@ import './Login.css'
 
 interface FormData {
   name: string;
-  username: string;
+  emailId: string;
   password: string;
 }
 
@@ -13,7 +13,7 @@ const Signup = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState<FormData>({
     name: "",
-    username: "",
+    emailId: "",
     password: ""
   });
 
@@ -27,7 +27,7 @@ const Signup = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (!formData.name || !formData.username || !formData.password) {
+    if (!formData.name || !formData.emailId || !formData.password) {
       alert("Please fill all the entries to Sign up");
       return;
     }
@@ -59,8 +59,8 @@ const Signup = () => {
         </div>
 
         <div className="form-block">
-          <label>Username:</label>
-          <input type="text" name="username" onChange={handleChange} value={formData.username} placeholder="Enter username" required />
+          <label>emailId:</label>
+          <input type="text" name="emailId" onChange={handleChange} value={formData.emailId} placeholder="Enter your emailId" required />
         </div>
 
         <div className="form-block">

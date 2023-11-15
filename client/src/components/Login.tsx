@@ -4,7 +4,7 @@ import { useState } from "react";
 import axios from 'axios';
 
 interface FormData {
-    username: string;
+    emailId: string;
     password: string;
 }
 
@@ -13,7 +13,7 @@ function Login() {
     const navigate = useNavigate();
 
     const [formData, setFormData] = useState<FormData>({
-        username: "",
+        emailId: "",
         password: ""
     })
     // giving a real time data
@@ -27,7 +27,7 @@ function Login() {
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
-        if (!formData.username || !formData.password) {
+        if (!formData.emailId || !formData.password) {
             alert("Please fill all the entries to login");
             // Alert is used instead of console log
             return;
@@ -52,13 +52,13 @@ function Login() {
             <h2>Login</h2>
             <form onSubmit={handleSubmit}>
                 <div className="form-block">
-                    <label htmlFor="username">Username:</label>
+                    <label htmlFor="emailId">emailId:</label>
                     <input
                         type="text"
-                        name="username"
+                        name="emailId"
                         onChange={handleChange}
-                        value={formData.username}
-                        placeholder="Enter username"
+                        value={formData.emailId}
+                        placeholder="Enter your emailId"
 
                     />
                 </div>

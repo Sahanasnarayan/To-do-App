@@ -34,7 +34,7 @@ export default function TodoList({ userId }: TodoListProps) {
         setCompleted(complete);
         setInComplete(incomplete);
       } catch (error) {
-        alert(`Error fetching data:error: ${error.message}`);
+        alert(`Error fetching data.error: ${error.message}`);
 
       }
     };
@@ -48,7 +48,7 @@ export default function TodoList({ userId }: TodoListProps) {
     try {
       await axios.delete(`http://127.0.0.1:3001/api/task/deleteTodoItem/${ItemId}`);
     } catch (error) {
-      alert(`Something went wrong and error occurred is. error: ${error.message}`);
+      alert(`Something went wrong. error: ${error.message}`);
     }
   };
 
@@ -66,7 +66,7 @@ export default function TodoList({ userId }: TodoListProps) {
       });
       setEditItemId(null);
     } catch (error) {
-      alert(`The error occurred is. error: ${error.message}`);
+      alert(`Something went wrong. error: ${error.message}`);
     }
   };
 
@@ -77,14 +77,14 @@ export default function TodoList({ userId }: TodoListProps) {
         isCompleted: !iscompleted
       });
     } catch (error) {
-      alert(`The error occurred is. error: ${error.message}`);
+      alert(`Something went wrong.error: ${error.message}`);
     }
   };
 
   return (
     <div className="list-item-page">
       <ul className="list">
-        <h1 className="header">TODO ITEMS</h1>
+        <button className="header">TODO ITEMS</button>
         {inComplete.map((item) => (
           <li className="list-item" key={item._id}>
             {editItemId === item._id ? (
@@ -104,13 +104,13 @@ export default function TodoList({ userId }: TodoListProps) {
                 <span className="item-description">{item.task}</span>
                 <div>
                   <button className="buttons" onClick={() => handleIncomplete(item._id, item.task, item.isCompleted)}>
-                    Completed
+                    Done &#10003; 
                   </button>
                   <button className="buttons" onClick={() => handleUpdate(item._id, item.task, item.isCompleted)}>
-                    Update
+                    Edit
                   </button>
                   <button className="buttons" onClick={() => handleDelete(item._id)}>
-                    Delete
+                    Remove
                   </button>
                 </div>
               </>
@@ -119,13 +119,13 @@ export default function TodoList({ userId }: TodoListProps) {
         ))}
       </ul>
       <ul className="list">
-        <h1 className="header">COMPLETED</h1>
+        <button className="header">COMPLETED</button>
         {completed.map((item) => (
           <li className="list-item" key={item._id}>
             <span className="item-description">{item.task}</span>
             <div>
               <button className="buttons" onClick={() => handleIncomplete(item._id, item.task, item.isCompleted)}>
-                Incomplete
+                Incomplete &#10008;
               </button>
               <button className="buttons" onClick={() => handleDelete(item._id)}>
                 Delete

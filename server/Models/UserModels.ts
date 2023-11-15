@@ -2,7 +2,7 @@ import mongoose, { Schema, Document } from 'mongoose';
 
 interface UserInterface extends Document {
   name: string;
-  username: string;
+  emailId: string;
   password: string;
 }
 
@@ -12,7 +12,7 @@ const userSchema: Schema<UserInterface> = new mongoose.Schema(
       type: String,
       required: [true, 'Please enter your name'],
     },
-    username: {
+    emailId: {
       type: String,
       required: [true, 'Please enter your email'],
       unique: true,

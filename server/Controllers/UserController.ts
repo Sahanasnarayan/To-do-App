@@ -6,9 +6,9 @@ console.log("we are in usercontroller");
 // TO SIGNUP
 export const registerUser = async (req: Request, res: Response) => {
     try {
-        const { name, username, password } = req.body;
+        const { name, emailId, password } = req.body;
 
-        const existingUser = await User.findOne({ username });
+        const existingUser = await User.findOne({ emailId });
 
         if (existingUser) {
             return res.status(409).json({ message: `User already registered` });
@@ -18,7 +18,7 @@ export const registerUser = async (req: Request, res: Response) => {
 
         const user = await User.create({
             name,
-            username,
+            emailId,
             password: hashedPassword,
         });
 
@@ -32,16 +32,16 @@ export const registerUser = async (req: Request, res: Response) => {
 // User Login
 export const loginUser = async (req: Request, res: Response) => {
     try {
-        const { username, password } = req.body;
+        const { emailId, password } = req.body;
 
-        if (!username || !password) {
-            return res.status(401).json({ message: `Please enter username and password` });
+        if (!emailId || !password) {
+            return res.status(401).json({ message: `Please enter emailId and password` });
         }
 
-        const user = await User.findOne({ username });
+        const user = await User.findOne({ emailId });
 
         if (!user || !(await bcrypt.compare(password, user.password))) {
-            return res.status(401).json({ message: `Invalid username or password` });
+            return res.status(401).json({ message: `Invalid emailId or password` });
         }
 
         res.status(200).json({ user });

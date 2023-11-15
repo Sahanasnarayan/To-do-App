@@ -2,8 +2,10 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: x-large;
     font-weight: 500;
-    color: rgb(73, 69, 69);
+    color: rgb(116, 108, 108);
     margin: 20px 120px;
+    border: 2px solid rgb(242, 15, 163);
+    border-radius: 8px;
 }
 
 .list-item-page {
@@ -25,7 +27,8 @@
     flex-direction: row;
     justify-content: space-between;
     list-style-type: none;
-    width: 404px;
+    width: 407px;
+    background-color:lightpink;
     min-height: 28px;
     border: 1px solid rgb(119, 92, 200);
     border-radius: 5px;

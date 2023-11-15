@@ -27,7 +27,7 @@ export const addTodoItem = async (req: Request, res: Response) => {
             userId,
         });
 
-        return res.status(201).json({ message: `List Item added Successfully`, newItem });
+        return res.status(201).json({ message: `Todo Item added Successfully`, newItem });
     } catch (error) {
         return res.status(500).json({ message: `Internal Server issue`, error });
     }
@@ -46,7 +46,7 @@ export const updateTodoItem = async (req: Request, res: Response) => {
         const list_Item = await List.findOne({ _id: listItem });
 
         if (!list_Item) {
-            return res.status(404).json({ message: `List Item not found, Please enter valid Item Id` });
+            return res.status(404).json({ message: `Todo Item not found, Please enter valid Item Id` });
         }
 
         if (!task) {
@@ -58,7 +58,7 @@ export const updateTodoItem = async (req: Request, res: Response) => {
 
         await list_Item.save();
 
-        res.status(200).json({ message: 'List item updated successfully', listItem });
+        res.status(200).json({ message: 'Todo item edited successfully', listItem });
     } catch (error) {
         return res.status(500).json({ message: `Something went wrong`, error });
     }
@@ -70,16 +70,16 @@ export const deleteTodoItem = async (req: Request, res: Response) => {
         const itemId = req.params.id;
 
         if (!ObjectId.isValid(itemId)) {
-            return res.status(400).json({ message: `Invalid List Item Id` });
+            return res.status(400).json({ message: `Invalid Todo Item Id` });
         }
 
         const deleteItem = await List.findOneAndDelete({ _id: itemId });
 
         if (!deleteItem) {
-            return res.status(404).json({ message: `List Item not found` });
+            return res.status(404).json({ message: `Todo Item not found` });
         }
 
-        res.status(200).json({ message: `List Item Deleted Successfully` });
+        res.status(200).json({ message: `Todo Item Deleted Successfully` });
     } catch (error) {
         return res.status(500).json({ message: `Something went wrong`, error });
     }
