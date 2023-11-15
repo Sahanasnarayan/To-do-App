@@ -86,7 +86,7 @@ export default function TodoList({ userId }: TodoListProps) {
   return (
     <div className="list-item-page">
       <ul className="list">
-        <h1 className="header">Incomplete Items</h1>
+        <h1 className="header">TODO ITEMS</h1>
         {inComplete.map((item) => (
           <li className="list-item" key={item._id}>
             {editItemId === item._id ? (
@@ -121,7 +121,7 @@ export default function TodoList({ userId }: TodoListProps) {
         ))}
       </ul>
       <ul className="list">
-        <h1 className="header">Completed Items</h1>
+        <h1 className="header">COMPLETED</h1>
         {completed.map((item) => (
           <li className="list-item" key={item._id}>
             <span className="item-description">{item.task}</span>
