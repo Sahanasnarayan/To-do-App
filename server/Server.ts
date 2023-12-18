@@ -2,11 +2,10 @@ import express, { Application, Request, Response } from 'express';
 const database = require("./dbConnection")
 const app: Application = express();
 const PORT: number = 3001;
-const bodyParser = require('body-parser');
+// const bodyParser = require('body-parser');
 const cors = require('cors');
 const helmet = require('helmet');
 
-app.use(bodyParser.json());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(helmet());
