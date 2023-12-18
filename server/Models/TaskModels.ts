@@ -13,6 +13,7 @@ const ListSchema = mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         required: true
     }
+    // taskid is not given
 });
 
 const List = mongoose.model('List', ListSchema);

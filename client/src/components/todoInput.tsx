@@ -23,7 +23,7 @@ export default function TodoInput({ userId }: TodoInputProps) {
       await axios.post('http://127.0.0.1:3001/api/task/addTodoItem', data);
       setTask('');
     } catch (error) {
-      alert('Something went wrong.error: ${error.message}');
+      alert(`Something went wrong.error: ${error.message}`);
     }
   }
 

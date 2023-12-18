@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import './Login.css'
 import { useState } from "react";
 import axios from 'axios';
-
+// filenames shud start with smallletters
 interface FormData {
     emailId: string;
     password: string;

@@ -16,7 +16,7 @@ const Signup = () => {
     emailId: "",
     password: ""
   });
-
+  
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({
       ...formData,
